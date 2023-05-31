@@ -5,16 +5,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String login = "boris1____";
+        String login = "boris1___";
         String password = "112fdfsf____";
         String confirmPassword = "112fdfsf____";
 
 
         try {
             check(login, password, confirmPassword);
-        } catch (WrongLoginException e) {
-            System.out.println(e.getMessage());
-        } catch (WrongPasswordException e) {
+        } catch (WrongLoginException | WrongPasswordException e) {
             System.out.println(e.getMessage());
         }
 
